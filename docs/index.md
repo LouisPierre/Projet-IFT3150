@@ -1,4 +1,4 @@
-# Projet IFT3150: Nom du projet
+# Projet IFT3150: Plateforme de traitement de signaux audio analogique et numérique
 
 > **Thèmes**: Systèmes Embarqués, Micro-Contrôlleur  
 > **Superviseur**: Louis Edouard Lafontant (Guy Bois *pending*)  
@@ -25,17 +25,18 @@
 Avec les progrès fait dans le domaine de l&rsquo;audio numérique, de plus
  en plus de solutions digitales s&rsquo;offrent aux musiciens (simulateur
  d&rsquo;amplificateur, d&rsquo;éffets sonores). Mais les solutions analogue offrent
- des sons qui ne sont parfois pas accessibles autrement. Or un usager pourrait
+ des options qui ne sont parfois pas accessibles autrement. Or un usager pourrait
  vouloir avoir une partie de son signal qui est traité de manière analogique
  et l&rsquo;autre de manière numérique. Quand un musicien performe, il n&rsquo;a pas
  le temps de pèser sur plusieurs boutons pour changer le chemin qu&rsquo;emprunte
  son signal ou de cliquer avec une souris sur son ordinateur pour changer
- les paramètres de son simulateur d&rsquo;amplificateur.
+ les paramètres de son simulateur d&rsquo;amplificateur.  
 
 ### Proposition et objectifs
 
+On propose de développer une plateforme qui permetterait de gêrer à la fois la partie analogique (via un "loopswitcher" et la partie numérique (via l'envoi de signaux MIDI) et d'héberger les logigiels de traitement de signaux numériques de sorte que le musicien pourrait accèder aux sons qu'il désire en n'ayant qu'à peser sur un boutton. Le rootage des signaux serait sauvegardé par l'utilisateur sous forme de programmes (un programme pourrait par exemple enchaîner en succession les différents sons nécessaire pour interpréter une pièce musicale en appuyant sur le même boutton).    
 
-## Hardware
+
 
 
 ### Traitement des signaux analogues
@@ -66,20 +67,19 @@ signaux MIDI pour changer les paramètres des effets digital.
 
 L&rsquo;hébergement de logiciels de traitement sonore à même le dispositif permettrait
 aux usagers de ne plus dépendre d&rsquo;un ordinateur pour la partie de traitement digitale,
-des solutions similaires existe déjà pour ce genre de chose, mais elles sont de nature
+des solutions similaires existent déjà pour ce genre de chose, mais elles sont de nature
 propriétaire et ne laissent aux usagers que les choix offerts par la compagnie.
 La solution qu&rsquo;on propose serait moins contraignante et open source.
 
 
+## Hardware
+Pour la conception de la partie de traitement de signal numérique, des contraintes de temps existent pour la conversion analogique vers numérique, le traitement du signal numérique et la reconversion numérique vers analogique (vers une sortie telle que des écouteurs ou des haut parleurs) ce faisant, une carte FPGA est envisagée pour le développement.
+
 ### Microcontrolleur
 
-Pour le prototype, un arduino est envisagé, mais je
-vise un circuit imprimé &rsquo;custom&rsquo; pour le projet final.
+Pour le controlle analogique, dans la phase de prototypage un arduino est envisagé, mais 
+un circuit imprimé sur mesure serait probablement mieux au final.
 
-La partie hébergement de plugin demandera aussi nécessairement un processeur,
-et la conversion analog vers digital et digital vers analog. Des contraintes de
-temps seraient nécessaires pour ne pas que le temps de réponse soit trop long ou
-que le signale coupe.
 
 <img src="./MIDI_Relay.jpg" alt="MIDI_Relay" style="width:50%;" />
 
@@ -105,8 +105,8 @@ ajouter plus de &rsquo;loops&rsquo; à son dispositifs ou différents moyens d&r
 
 -   Le projet est présenté avec un guitariste comme usager, mais un claviériste pourrait
     tout aussi bien utiliser un dispositif semblable pour ajouter plus de contrôles à un
-    clavier existant (potentiomètres pour influencer la fréquences d&rsquo;un EQ) switch pour
-    tourner les pages d&rsquo;une partition sur une tablette&#x2026;
+    clavier existant (potentiomètres pour influencer la fréquences d&rsquo;un égalisateur) switch pour
+    tourner les pages d&rsquo;une partition sur une tablette&#x2026, storer des instruments virtuels;
 
 
 
