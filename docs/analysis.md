@@ -2,7 +2,15 @@
 
 ## Analyse du problème
 
-- Décrire le problème à résoudre.
+Avec les progrès fait dans le domaine de l&rsquo;audio numérique, de plus
+ en plus de solutions digitales s&rsquo;offrent aux musiciens (simulateur
+ d&rsquo;amplificateur, d&rsquo;éffets sonores). Mais les solutions analogue offrent
+ des options qui ne sont parfois pas accessibles autrement. Or un usager pourrait
+ vouloir avoir une partie de son signal qui est traité de manière analogique
+ et l&rsquo;autre de manière numérique. Quand un musicien performe, il n&rsquo;a pas
+ le temps de pèser sur plusieurs boutons pour changer le chemin qu&rsquo;emprunte
+ son signal ou de cliquer avec une souris sur son ordinateur pour changer
+ les paramètres des instruments virtuels ou plugins qu'il utilise.  
 
 ## Exigences
 
@@ -18,7 +26,6 @@
 
 ## Recherche de solutions
 
-- Présenter les solutions existantes et justifier le choix retenu.
 ## Contrôle de signal analogique
 
 ### Midi activated loopswitcher
@@ -66,6 +73,33 @@ _AxeFX_
 
 _Fender Tone Master Pro_  
 [Tone Master Pro](https://intl.fender.com/products/tone-master-pro?variant=45947071463646)
+
+Tous ces dispositifs restreignent l'utilisateur à n'utiliser que le traitement numérique propriétaire vendu par chaque compagnie respective.
+
+
+### Convertisseurs analogiques digital/digital analogique (AD DA)
+[CS4272](https://www.cirrus.com/products/cs4272)
+
+
+## Conclusion et choix retenu
+
+Les solutions déjà existantes étant dispendieuses et propriétaires, nous croyons qu'un usager pourrait bénifissier d'une plateforme plus ouverte.
+
+### Commutateurs pour circuits analogiques
+Nous avons choisi d'utiliser des relai pour l'acheminement du signal analogique car il est possible de faire des contacts "true bypass" avec des relai [amplified parts](https://www.amplifiedparts.com/tech-articles/relay-true-bypass-switching-1) et leur implémentation semble assez simple avec un micro controlleur. 
+
+### Envoi de signaux midi
+l'envoi de signaux midi peut se faire assez facilement par le biais d'un micro controlleur et d'une librairie MIDI
+
+### Hébergement de logiciels audio numérique
+- Nécessite d'avantage de recherches  
+
+- Solutions envisagée de manière préliminaires serait possiblement un UDOOX86  
+  [UDOOX86](https://www.udoo.org/docs-x86/Introduction/Introduction.html)
+
+mais l'évaluation de performances et devra être faite pour voir si cette option est viable.  
+
+Le convertisseur AD DA CS4272 ayant déjà fait ses preuves commercialement serait une option envisageable et pas trop coûteuse
 
 ## Méthodologie
 
