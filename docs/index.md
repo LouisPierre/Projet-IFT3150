@@ -1,7 +1,7 @@
 # Projet IFT3150: Plateforme de traitement de signaux audio analogique et numérique
 
 > **Thèmes**: Systèmes Embarqués, Micro-Contrôlleur  
-> **Superviseur**: Louis Edouard Lafontant (Guy Bois *pending*)  
+> **Superviseur**: Louis Edouard Lafontant (Autres -> *pending*)  
 > **Collaborateurs:** Nom de(s) collaborateur(s) et partenaire(s)  
 
 ## Informations importantes
@@ -30,7 +30,7 @@ Avec les progrès fait dans le domaine de l&rsquo;audio numérique, de plus
  et l&rsquo;autre de manière numérique. Quand un musicien performe, il n&rsquo;a pas
  le temps de pèser sur plusieurs boutons pour changer le chemin qu&rsquo;emprunte
  son signal ou de cliquer avec une souris sur son ordinateur pour changer
- les paramètres de son simulateur d&rsquo;amplificateur.  
+ les paramètres des instruments virtuels ou plugins qu'il utilise.  
 
 ### Proposition et objectifs
 
