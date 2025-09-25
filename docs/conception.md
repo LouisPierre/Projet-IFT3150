@@ -2,11 +2,21 @@
 
 ## Architecture
 
-- Décrire l'architecture du système proposé.
+- Gestion des composantes analogiques et numériques d'un signal audio
+
+- Interface permettant l'utilisateur d'avoir les mains libres quand il l'itilise
+
+- Configuration des différents paramètres des programmes via une application mobile
 
 ## Choix technologiques
 
-- Justifier les technologies et outils choisis.
+- Utilisation de relais avec optocopler pour avoir un "True Bypass" dans les cirquits désactivé
+
+- Prototypage du circuit analogique sur arduino vu la facilicté d'accès
+
+- Utilisation du 74HC595 pour multiplier les entrées sorties du micro-controlleur
+
+- Application mobile pour configurer l'interface car la majorité des utilisateur en ont un sur eux.
 
 ## Modèles et diagrammes
 
