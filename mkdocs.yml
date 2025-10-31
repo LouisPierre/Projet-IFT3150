@@ -1,7 +1,7 @@
-site_name: IFT3150 - Template
-site_description: Template de site web pour le cours IFT3150
-site_author: Louis-Edouard Lafontant
-site_url: https://ift3150-template.github.io
+site_name: IFT3150
+site_description: Controlleur de signal audio analogique et numérique
+site_author: Louis-Pierre Bastien
+site_url: https://louispierre.github.io/Projet-IFT3150/
 
 theme:
   name: material
@@ -37,8 +37,8 @@ theme:
     
 copyright: "&copy; 2025 <b>DIRO</b> &ndash; Template pour le cours IFT3150/IFT4055 <br>Département d'informatique et de recherche opérationnelle <br>Université de Montréal"
 
-repo_name: ift3150-template
-repo_url: https://github.com/ift3150-template/ift3150-template.github.io
+repo_name: Projet ift3150
+repo_url: https://github.com/LouisPierre/Projet-IFT3150
 # edit_uri: edit/main/docs/
 
 # extra:

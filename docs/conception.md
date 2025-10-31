@@ -18,10 +18,12 @@
 
 - Application mobile pour configurer l'interface car la majorité des utilisateur en ont un sur eux.
 
+- Utilisation de webSocket pour le serveur pour éviter les délais
+
 ## Modèles et diagrammes
 
-- Inclure des diagrammes UML, maquettes, etc.
+![img](./architecture.png)  
+![img](./SoftwareMap.png)
 
 ## Prototype
 
-- Inclure des diagrammes UML, maquettes, etc.

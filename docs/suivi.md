@@ -64,9 +64,46 @@ Rédaction de la section Études Préliminaires
     - Faire le circuit pour l'envoi de signaux MIDI
 ## Semaine 5
 
-## Semaine 6
+Identification du LattePanda IOTA x86 comme candidat pour héberger les pluggins
 
+!!! warning "Difficultés rencontrées"
+
+    - Delai de livraison des pièces
+    - Il faut des "pull-down resistor" pour les interrupteurs momentanés sinon la valeur envoyé aux inputs du micro-controlleur est aléatoire.
+    - Ça prends des fils exprès pour les breadboard avec un core solide et non pas plusieurs filaments
+
+## Semaine 6
+    - Fin de connections des composantes au micro-controlleur
+    - réorganisation du circuit du loopswitcher (2 itérations)
+    - Mettre le projet dans une boîte
+    - Faire un shéma de l'architecture du projet
+
+!!! warning "Difficultés rencontrées"
+
+    - Présentation: Ajuster resolution d'écran au préalable (flicker) 
+    - S'assurer d'utiliser un jargon pas trop technique 
+    - carte de relais + ecran = trop Ampérage -> arduino chauffe
+    
+!!! abstract "Prochaines étapes"
+    - Séparer l'alimentation électrique des relais du arduino 
+    - Finir le firmware pour les bouttons et le MIDI
+    - Discussion d'implémentation de convertisseur audio-digital/digital-audio avec Guy Bois
+    
 ## Semaine 7
+
+  Exploration de creation d'interface audio avec puce Cirrus CS4272  
+  Separation de l'alimentation de la carte de relais (utilisation d'un "buck converter")  
+  finir Firmware  
+  Instalation d'OS et de Pluggins pour tester le LattePanda  
+  
+!!! warning "Difficultés rencontrées"
+
+    - Même si on alimente la carte des relais avec une source externe, il faut que le ground soit mis en commun avec le micro-controlleur sinon les relais ne s'activent pas!
+    - Concept du pulldown resistor pas si intuitif que ça
+!!! abstract "Prochaines étapes"
+    - Commencer l'application mobile pour la configuration
+    - Transfert vers le RP0240 du LattePanda IOTA
+    - Mettre le projet dans une boîte plus solide que du carton
 
 ## Semaine 8
 

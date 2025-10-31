@@ -49,9 +49,7 @@ On propose de développer une plateforme qui permetterait de gêrer à la fois l
      ineragit (switch ou potentiomètre) pour en &rsquo;allumer ou éteindre&rsquo;
      plusieurs à la fois.
     
-    ![img](./LoopSwitcher.png)
     
-    ![img](./Hardware.jpg)
 
 
 ### Traitement de la partie digitale
@@ -60,7 +58,6 @@ Les moyens d&rsquo;interaction (boutons ou potentiomètres) étant
 liés au microcontrolleur, pourront &rsquo;trigger&rsquo; l&rsquo;envoi de
 signaux MIDI pour changer les paramètres des effets digital.
 
-![img](./MIDI_Link.png)
 
 
 ### Hébergement de plugins de traitement de son digital sur le hardware
@@ -81,7 +78,6 @@ Pour le controlle analogique, dans la phase de prototypage un arduino est envisa
 un circuit imprimé sur mesure serait probablement mieux au final.
 
 
-<img src="./MIDI_Relay.jpg" alt="MIDI_Relay" style="width:50%;" />
 
 
 ## Software
@@ -116,18 +112,3 @@ ajouter plus de &rsquo;loops&rsquo; à son dispositifs ou différents moyens d&r
 !!! info
     Le suivi complet est disponible dans la page [Suivi de projet](suivi.md).
 
-| Jalon (*Milestone*)            | Date prévue   | Livrable                            | Statut      |
-|--------------------------------|---------------|-------------------------------------|-------------|
-| Ouverture de projet            | 1 mai         | Proposition de projet               | ✅ Terminé  |
-| Analyse des exigences          | 16 mai        | Document d'analyse                  | 🔄 En cours |
-| Prototype 1                    | 23 mai        | Maquette + Flux d'activités         | ⏳ À venir  |
-| Prototype 2                    | 30 mai        | Prototype finale + Flux             | ⏳ À venir  |
-| Architecture                   | 30 mai        | Diagramme UML ou modèle C4          | ⏳ À venir  |
-| Modèle de donneés              | 6 juin        | Diagramme UML ou entité-association | ⏳ À venir  |
-| Revue de conception            | 6 juin        | Feedback encadrant + ajustements    | ⏳ À venir  |
-| Implémentation v1              | 20 juin       | Application v1                      | ⏳ À venir  |
-| Implémentation v2 + tests      | 11 juillet    | Application v2 + Tests              | ⏳ À venir  |
-| Implémentation v3              | 1er août      | Version finale                      | ⏳ À venir  |
-| Tests                          | 11-31 juillet | Plan + Résultats intermédiaires     | ⏳ À venir  |
-| Évaluation finale              | 8 août        | Analyse des résultats + Discussion  | ⏳ À venir  |
-| Présentation + Rapport         | 15 août       | Présentation + Rapport              | ⏳ À venir  |
