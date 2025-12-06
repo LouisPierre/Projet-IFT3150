@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintAnimationEnabled">false</item>
-        <item name="android:paddingBottom">8dp</item>  <!-- Espace pour le hint en dessous -->
-    </style>
-</resources>
