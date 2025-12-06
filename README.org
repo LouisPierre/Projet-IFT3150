@@ -1,0 +1,94 @@
+#+title: Controlleur de signaux analogiques et numériques
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+OPTIONS: author:nil
+#+OPTIONS: date:nil
+
+*** Site web du projet
+https://louispierre.github.io/Projet-IFT3150/
+
+
+*** Membres de l'équipe
+Louis-Pierre Bastien
+
+*** Superviseur de projet
+Louis Edouard Lafontant
+***** Co-superviseur potentiel
+- Guy Bois
+
+
+*** Problématique
+Avec les progrès fait dans le domaine de l'audio numérique, de plus
+ en plus de solutions digitales s'offrent aux musiciens (simulateur
+ d'amplificateur, éffets sonores, instruments virtuels). Mais les solutions analogue offrent
+ des sons qui ne sont parfois pas accessibles autrement. Or un usager pourrait
+ vouloir avoir une partie de son signal qui est traité de manière analogique
+ et l'autre de manière numérique. Quand un musicien performe, il n'a pas
+ le temps de pèser sur plusieurs boutons pour changer le chemin qu'emprunte
+ son signal ou de cliquer avec une souris sur son ordinateur pour changer
+ les paramètres de son simulateur d'amplificateur.
+
+*** Proposition et objectifs
+
+Le but serait de créer un dispositif qui permetterait au musicien de contrôller simultanément
+la partie analogique et numérique de son signal à l'aide de réglages pré-définis, accessibles
+de manière instantanée, ce qui permetterait au musicien de faire abstraction des
+composantes qui affectent son signal audio.
+
+**** Hardware
+***** Traitement des signaux analogues
+****** Loopswitcher
+Les effets analogiques seraient toujours à 'ON', on choisirait
+par où le signal passe à l'aide de relais (ou transistors),
+d'un microcontrolleur et d'un boutton avec lequel l'utilisateur
+ ineragit (switch ou potentiomètre) pour en activer un ou
+ plusieurs à la fois.
+
+
+***** Traitement de la partie digitale
+Les moyens d'interaction (boutons ou potentiomètres) étant
+liés au microcontrolleur, pourront déclencher l'envoi de
+signaux MIDI pour changer les paramètres des effets digitals.
+
+
+***** Hébergement de plugins de traitement de son digital sur le hardware
+L'hébergement de logiciels de traitement sonore(plugins, instruments virtuels) à même le dispositif permettrait
+aux usagers de ne plus dépendre d'un ordinateur pour la partie de traitement digitale,
+des solutions similaires existent déjà pour ce genre de chose, mais elles sont de nature
+propriétaire et ne laissent aux usagers que des choix limités.
+La solution qu'on propose serait moins contraignante.
+
+***** Microcontrolleur
+Pour le prototype, un ESP32 est envisagé, avec pour but final de
+faire un circuit sur mesure.
+
+La partie hébergement de plugin demandera aussi nécessairement un processeur,
+et la conversion analog vers digital et digital vers analog. Des contraintes de
+temps seraient nécessaires pour ne pas que le temps de réponse soit trop long ou
+que le signale coupe. Un LattePanda IOTA (x86) est une solution envisagée.
+
+**** Software
+Fournir une interface intuitive pour que l'utilisateur puisse
+configurer/modifier le comportement du dispositif/des actions
+exécutée en fonction des inputs qu'il donne (ex. appuyer sur
+un bouton -> changement de programme/inclure un effet analogique dans le signal ou
+envoyer un signal MIDI etc).
+
+*** Planification
+
+**** Prototypage
+***** Phase de gestion analogique (gestionnaire de boucles)
++ Connection des entrées et sorties analogiques aux relais
++ Connection des relais au micro-controlleur
++ Programmer les différents états du circuit analogique
++ Mettre en place les interfaces utilisateur (boutons, écran)
+***** Phase de gestion de controlle numérique
++ Faire en sorte que le dispositif puisse envoyer des signaux MIDI
+  à une plateforme d'hébergement de 'plugins audio numérique'
+***** Application mobile pour la configuration du hardware
++ Développer une application mobile pour permettre à l'utilisateur
+  de configurer le dispositif et sauvegarder différents sons.
+***** Hébergement de plugins sur le hardware
++ Analyse de performance nécessaire
++ intégration d'une interface analogique->numérique/ numérique-analogique (AD/DA)
++ Choix d'OS et de gestionnaire de plugin numérique
